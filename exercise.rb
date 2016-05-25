@@ -29,16 +29,16 @@ class Exercise
     # TODO: Implement this method
     a = 0
     b = 1
-    even_arr = []
+    even_sum = 0
     (1..nth).each do
       if b.even?
-        even_arr << b
+        even_sum = even_sum + b
       end
       z = (a + b)
       a = b
       b = z
     end
-    return even_arr.inject(:+)
+    return even_sum
   end
 
 end
