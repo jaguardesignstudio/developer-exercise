@@ -7,27 +7,36 @@ class Exercise
 
   def self.marklar(str)
     # TODO: Implement this method
-    # p str
-    # binding.pry
 
     words = str.split
 
-    words.each do |word|
+    words.each_with_index do |word, index|
 
         if word.length > 4
             p "length greater than 4 #{word}"
-            replaced_with_marklar(word)
+            # repl_word = replaced_with_marklar(word)
+            words[index] = replaced_with_marklar(word)
+            p "#{words[index]}"
+            # binding.pry
         end
     end
+
+    return words.join(" ")
 
   end
 
   def self.replaced_with_marklar(word)
 
       p "reaplced with marklar called #{word}"
-      if word[0]
 
+      if word[0].match(/[[:upper:]]/)
+          word = "Marklar"
+      else
+          word = "marklar"
       end
+
+      return word
+
   end
 
   # Return the sum of all even numbers in the Fibonacci sequence, up to
