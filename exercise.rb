@@ -48,9 +48,6 @@ class Exercise
   # eg. the Fibonacci sequence up to 6 terms is (1, 1, 2, 3, 5, 8),
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
-    # TODO: Implement this method
-
-    p nth
 
     result = 0
 
@@ -68,7 +65,6 @@ class Exercise
   end
 
   def self.cal_fibonacci(num)
-      p "cal_fibonacci called .. "
 
       result = [0,1]
 
