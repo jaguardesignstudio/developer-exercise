@@ -6,7 +6,6 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
 
   def self.marklar(str)
-
     words = str.split
 
     words.each_with_index do |word, index|
