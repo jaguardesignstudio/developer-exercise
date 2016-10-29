@@ -49,6 +49,43 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
+
+    p nth
+
+    result = 0
+
+    even_fib = cal_fibonacci(nth)
+
+    even_fib.each do |x|
+
+        if x % 2 == 0
+            result += x
+        end
+    end
+
+    return result
+
+  end
+
+  def self.cal_fibonacci(num)
+      p "cal_fibonacci called .. "
+
+      result = [0,1]
+
+      term1 = 0
+      term2 = 1
+
+      (2..num).each do |x|
+          temp = term1 + term2
+
+          term1 = term2
+
+          term2 = temp
+
+          result.push(temp)
+      end
+
+      return result
   end
 
 end
