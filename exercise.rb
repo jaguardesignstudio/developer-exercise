@@ -6,18 +6,14 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
 
   def self.marklar(str)
-    # TODO: Implement this method
 
     words = str.split
 
     words.each_with_index do |word, index|
 
         if word.length > 4
-            p "length greater than 4 #{word}"
-            # repl_word = replaced_with_marklar(word)
             words[index] = replaced_with_marklar(word)
-            p "#{words[index]}"
-            # binding.pry
+
         end
     end
 
@@ -27,12 +23,20 @@ class Exercise
 
   def self.replaced_with_marklar(word)
 
-      p "reaplced with marklar called #{word}"
-
       if word[0].match(/[[:upper:]]/)
+
           word = "Marklar"
+
+      elsif word.match(/[[:punct:]]/)
+
+          punct = word.match(/[[:punct:]]/)
+          punct = punct.to_s
+          word = "marklar"+ punct
+
       else
-          word = "marklar"
+
+           word = "marklar"
+
       end
 
       return word
