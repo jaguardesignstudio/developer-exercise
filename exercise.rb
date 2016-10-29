@@ -21,6 +21,7 @@ class Exercise
 
   end
 
+  # helper to format strings
   def self.replaced_with_marklar(word)
 
       if word[0].match(/[[:upper:]]/)
@@ -64,6 +65,7 @@ class Exercise
 
   end
 
+  # helper to calculate Fibonacci series
   def self.cal_fibonacci(num)
 
       result = [0,1]
@@ -72,13 +74,12 @@ class Exercise
       term2 = 1
 
       (2..num).each do |x|
+
           temp = term1 + term2
-
           term1 = term2
-
           term2 = temp
-
           result.push(temp)
+
       end
 
       return result
