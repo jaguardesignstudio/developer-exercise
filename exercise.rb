@@ -5,7 +5,8 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
     str = str.split(" ")
-    str
+    str.join(" ")
+
   end
 
   # Return the sum of all even numbers in the Fibonacci sequence, up to
