@@ -5,8 +5,18 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
     str = str.split(" ")
-    str.join(" ")
 
+    str.map! do |word|
+      if word.length >= 5 && word == word.capitalize
+        word = "Marklar"
+      elsif word.length >= 5 && word != word.capitalize
+        word = "marklar"
+      else
+        word
+      end
+    end
+
+    str.join(" ")
   end
 
   # Return the sum of all even numbers in the Fibonacci sequence, up to
