@@ -24,18 +24,14 @@ class Exercise
   # eg. the Fibonacci sequence up to 6 terms is (1, 1, 2, 3, 5, 8),
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
-    # TODO: Implement this method
     sum = 0
     a = [1, 1]
 
     while a.length < nth
       a << a[-2] + a[-1]
     end
-    a.each do |x|
-      if x % 2 == 0 
-        sum += x
-      end 
-    end
+
+    a.each { |num| sum += num if num % 2 == 0 }
     sum 
   end
 
