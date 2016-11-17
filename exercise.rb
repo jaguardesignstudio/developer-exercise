@@ -25,6 +25,12 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
+    a = [1, 1]
+
+    while a.length < nth
+      a << a[-2] + a[-1]
+    end
+    p a 
   end
 
 end
