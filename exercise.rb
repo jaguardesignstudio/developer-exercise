@@ -25,6 +25,7 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
+    sum = 0
     a = [1, 1]
 
     while a.length < nth
@@ -32,10 +33,10 @@ class Exercise
     end
     a.each do |x|
       if x % 2 == 0 
-        p 'hello'
+        sum += x
       end 
     end
-    p a 
+    sum 
   end
 
 end
