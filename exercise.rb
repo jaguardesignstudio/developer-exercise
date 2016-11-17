@@ -8,9 +8,9 @@ class Exercise
 
     str.map! do |word|
       if word.length >= 5 && word == word.capitalize
-        word = "Marklar"
+        word.gsub(/\b\w+\b/, "Marklar")
       elsif word.length >= 5 && word != word.capitalize
-        word = "marklar"
+        word.gsub(/\b\w+\b/, "marklar")
       else
         word
       end
