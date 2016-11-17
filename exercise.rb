@@ -30,6 +30,11 @@ class Exercise
     while a.length < nth
       a << a[-2] + a[-1]
     end
+    a.each do |x|
+      if x % 2 == 0 
+        p 'hello'
+      end 
+    end
     p a 
   end
 
